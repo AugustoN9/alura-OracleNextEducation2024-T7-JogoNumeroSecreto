@@ -18,16 +18,16 @@ function exibirTextoNaTela(tag, texto) {
 
 exibirTextoNaTela("h1", "Jogo do número secreto");
 exibirTextoNaTela("p", "Escolha um número entre 1 e 10");
+let image = document.getElementById("imagem");
 
 function verificarChute() {
   chute = document.querySelector("input").value;
-  let image = document.getElementById("imagem");
-
+  
   console.log(chute);
 
   if (chute == numeroSecreto) {
     exibirTextoNaTela("h1", "Voce ACERTOU!");
-    image.src="./img/pomniOk.png";
+    image.src="./img/pomniOk2.png";
     let palavraTentativa = tentativas > 1 ? "tentativas" : "tentativa";
     let mensagemTentativas = `Você descobriu o número secreto com ${tentativas} ${palavraTentativa}!`;
     exibirTextoNaTela("p", mensagemTentativas);
@@ -67,6 +67,7 @@ function limparCampo() {
 }
 
 function reiniciarJogo() {
+  image.src="./img/pomni2.png";
   numeroSecreto = gerarNumeroAleatorio();
   limparCampo();
   tentativas = 1;
