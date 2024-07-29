@@ -131,6 +131,7 @@ button:disabled {
 
     .container__imagem-pessoa {
         display: none;
+        border: 1px solid black;
     }
 
     .container__conteudo {

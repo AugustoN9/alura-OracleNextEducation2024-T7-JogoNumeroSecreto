@@ -21,14 +21,17 @@ exibirTextoNaTela("p", "Escolha um número entre 1 e 10");
 
 function verificarChute() {
   chute = document.querySelector("input").value;
+  let image = document.getElementById("imagem");
 
   console.log(chute);
 
   if (chute == numeroSecreto) {
     exibirTextoNaTela("h1", "Voce ACERTOU!");
+    image.src="./img/pomniOk.png";
     let palavraTentativa = tentativas > 1 ? "tentativas" : "tentativa";
     let mensagemTentativas = `Você descobriu o número secreto com ${tentativas} ${palavraTentativa}!`;
     exibirTextoNaTela("p", mensagemTentativas);
+
     document.getElementById("reiniciar").removeAttribute("disabled");
   } else {
     if (chute > numeroSecreto) {
