@@ -101,6 +101,10 @@ button {
     font-family: 'Inter', sans-serif;
 }
 
+button:hover{
+    cursor: pointer;
+}
+
 .texto__paragrafo {
     font-size: 32px;
     font-weight: 400;
